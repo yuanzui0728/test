@@ -1,0 +1,16 @@
+CREATE TABLE IF NOT EXISTS `ims_lionfish_comshop_notice` (
+  `id` int(11) NOT NULL COMMENT '自增id',
+  `uniacid` int(11) NOT NULL COMMENT '公众号id',
+  `content` varchar(200) NOT NULL COMMENT '公告内容',
+  `displayorder` int(10) NOT NULL COMMENT '排序，越大排序越前面',
+  `enabled` tinyint(1) NOT NULL COMMENT '是否生效，1生效，0不生效',
+  `addtime` int(10) NOT NULL COMMENT '添加时间'
+) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8mb4 COMMENT='超级商城公告表';
+
+
+ALTER TABLE `ims_lionfish_comshop_notice`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `uniacid` (`uniacid`);
+
+ALTER TABLE `ims_lionfish_comshop_notice`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT COMMENT '自增id',AUTO_INCREMENT=1;
